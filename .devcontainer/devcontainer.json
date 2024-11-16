@@ -1,0 +1,16 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/java:17",
+    "features": {
+      "ghcr.io/devcontainers/features/maven:1": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vscjava.vscode-java-pack",
+          "pivotal.vscode-spring-boot"
+        ]
+      }
+    },
+    "postCreateCommand": "curl https://start.spring.io/starter.zip -d dependencies=web -d type=maven-project -d language=java -d name=HelloWorld -o spring-boot-hello-world.zip && unzip spring-boot-hello-world.zip -d ."
+  }
+    
